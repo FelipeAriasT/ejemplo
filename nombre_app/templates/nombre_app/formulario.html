@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario 2.0</h1>
+
+    <br><br>
+
+    <form action="{% url 'resultados' %}" method="POST">
+        {% csrf_token %}
+        <label for="fname">Primer nombre: </label>
+        <input type="text" id="fname" name="fname"> <br>
+
+        <label for="lname">Primer apellido: </label>
+        <input type="text" id="lname" name="lname"> <br><br><br>
+
+        <label for="age">Edad: </label>
+        <input type="number" id="age" name="age"><br><br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email"><br><br><br>
+
+        <p> Escoge tu dieta: </p>
+        <input type="radio" id="omnivora" name="dieta" value="omnivora">
+        <label for="omnivora">Omnívora</label><br>
+        <input type="radio" id="vegetariana" name="dieta" value="vegetariana">
+        <label for="vegetariana">Vegetariana</label><br>
+        <input type="radio" id="vegana" name="dieta" value="vegana">
+        <label for="vegana">Vegana</label><br>
+
+        <label for="vivienda">Tipo de vivienda:</label>
+        <select name="vivienda" id="vivienda">
+            <option value="casa">Casa</option>
+            <option value="departamento">Departamento</option>
+        </select>
+        <br><br>
+        <p> Animal favorito: </p>
+        <input type="checkbox" id="animal1" name="animal1" value="perro">
+        <label for="animal1">Perro</label><br>
+        <input type="checkbox" id="animal2" name="animal2" value="gato">
+        <label for="animal2">Gato</label><br><br><br>
+
+
+        <input type="submit" value="Enviar">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+</head>
+<body>
+
+    <h1>Bienvenid@ {{fname}}</h1>
+
+    <h2>Hola, {{fname}} {{lname}}</h2>
+
+    Acabas de registrarte en nuestra pagina, para confirmar declaraste los siguientes datos: <br>
+
+    Edad: {{age}} <br>
+    Correo electronico: {{email}} <br>
+    Tipo de dieta: {{ dieta }} <br>
+    Tipo de vivienda: {{ vivienda }} <br>
+    Animales preferidos:
+
+
+    {% for i in animales %}
+        {{i}},
+    {% endfor %}
+
+    <br><br>
+
+
+    Gracias por registrarte.
+
+
+
+</body>
+</html>
